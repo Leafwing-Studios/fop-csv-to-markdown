@@ -31,7 +31,7 @@ fn main() {
     let mut markdown = process_file(args.in_file, args.header_field_index, args.header_level);
 
     if let Some(title) = args.title {
-        markdown = format!("#{}\n\n", title) + &markdown;
+        markdown = format!("# {}\n\n", title) + &markdown;
     }
 
     if let Some(path) = args.out_file {
